@@ -8,7 +8,7 @@
 
     position: sticky;
     top: 0;
-    width: 100%;
+    /* width: 100%; */
     z-index: 1000; /* Ensures it stays on top of other content */
     background: white;
     transition: top 0.3s ease-in-out;
@@ -145,7 +145,8 @@
     }
 
     .navbar-container {
-      gap: 80px;
+      /* gap: 80px; */
+      gap: 128px
     }
   }
 
