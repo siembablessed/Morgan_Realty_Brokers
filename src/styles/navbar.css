@@ -145,8 +145,7 @@
     }
 
     .navbar-container {
-      /* gap: 80px; */
-      gap: 128px
+      gap: 80px;
     }
   }
 
