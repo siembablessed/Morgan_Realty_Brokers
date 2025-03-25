@@ -37,9 +37,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="container">
-        <TestimonialSlider/>
-        </div>
+      <TestimonialSlider/>
       </section>
 
       <section>

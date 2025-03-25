@@ -1,33 +1,32 @@
-import "../styles/contact.css"
+import React from "react";
+import "../styles/contact.css";
+import Contact_Image from "../images/Form.png"
+
 const ContactSection = () => {
-    return (
-      <div className="contact-section">
+  return (
+    <section className="contact-section">
+      <div className="contact-content">
         <div className="contact-text">
-          <h2>Get in touch with an expert</h2>
+          <h1>Get in touch with an expert</h1>
           <p>
-            Connect with us and experience the most reliable, adaptable, and results-driven real estate and property management services in Zimbabwe.
+            Connect with us and experience the most reliable,<br /> adaptable, and
+            results-driven real estate and property <br /> management services in
+            Zimbabwe.
           </p>
         </div>
-        <div className="contact-form">
-          <form>
-            <div>
-              <label>Name</label>
-              <input type="text" placeholder="John Doe" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input type="email" placeholder="example@gmail.com" />
-            </div>
-            <div>
-              <label>Message</label>
-              <textarea placeholder=" "></textarea>
-            </div>
-            <button>Submit</button>
-          </form>
-        </div>
+        <form className="contact-form">
+          <input type="text" placeholder="NAME" required />
+          <input type="email" placeholder="EMAIL ADDRESS" required />
+          <input type="tel" placeholder="PHONE NUMBER" required />
+          <textarea placeholder="MESSAGE" rows="4" required></textarea>
+          <button type="submit">Send</button>
+        </form>
       </div>
-    );
-  };
-  
-  export default ContactSection;
-  
+      <div className="contact-image">
+        <img src={Contact_Image} alt="Real Estate Desk" />
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;

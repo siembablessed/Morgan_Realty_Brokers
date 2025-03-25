@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/aboutsection.css";
-import harareImage from "../images/harareImage.png"; // Update with the correct path
+import harareImage from "../images/meet_the_team.png"; // Update with the correct path
 
 const AboutSection = () => {
   return (

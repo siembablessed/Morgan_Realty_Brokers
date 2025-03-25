@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/PropertyCards.css";
-import Cardone from "../images/Card1.png";
-import Cardtwo from "../images/Card2.png";
+import Cardone from "../images/card1_new.png";
+import Cardtwo from "../images/card2_new.png";
 import Cardthree from "../images/Card3.png";
 
 const PropertyCards = () => {

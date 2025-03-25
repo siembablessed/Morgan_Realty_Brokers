@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/realestatesection.css";
-import realEstateImage from "../images/harareimgae.png"; // Update the image path
+import realEstateImage from "../images/property_leased.png"; // Update the image path
 
 const RealEstateSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -8,27 +8,25 @@ const RealEstateSection = () => {
   return (
     <div className="real-estate-container">
       <div className="real-estate-text">
-        <h2>Expert Leasing Solutions for Property Owners & Tenants</h2>
+        <h2>Your Trusted Partner in Real Estate & <br /> Property Management</h2>
         <p>
-          With years of experience in leasing residential and commercial properties, 
-          we ensure the right fit for both landlords and tenants. We know that property 
-          owners want reliable tenants, and tenants seek a space where they can thrive—
-          when both parties win, real estate success follows.
+        Whether buying, selling, or leasing, property owners and investors trust us 
+        for expert guidance in Zimbabwe’s dynamic real estate market. With deep industry 
+        knowledge, a strong local network, and a commitment to excellence, we help our clients 
+        make informed decisions that maximize their investments
         </p>
 
         {/* Extra text that is hidden on mobile & tablet */}
         <div className={`extra-text ${isExpanded ? "show" : ""}`}>
           <p>
-            Our deep knowledge of Zimbabwe’s property market and our hands-on approach
-            make us the trusted partner in leasing. From marketing your property to 
-            conducting thorough tenant screenings and handling lease agreements, 
-            we streamline the entire process for a stress-free experience.
+          We offer a full-service approach to property management, leasing, and sales—ensuring 
+          smooth transactions, reliable tenant placements, and high returns. From marketing your 
+          property to handling legal compliance and maintenance, we take care of the details so you can 
+          focus on what matters most.
           </p>
           <p>
-            We take pride in matching the right tenants with the right properties, 
-            ensuring long-term satisfaction for both landlords and renters. Whether 
-            you’re looking to lease out your home, office space, or commercial property, 
-            Morgan Realty Brokers provides tailored solutions to meet your needs.
+          With Morgan Realty Brokers, you gain a dedicated team of professionals who understand the market, 
+          anticipate challenges, and deliver customized solutions for your real estate needs.
           </p>
         </div>
 

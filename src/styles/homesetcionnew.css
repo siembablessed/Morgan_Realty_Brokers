@@ -1,5 +1,6 @@
 /* Full Section Container */
 .home-section {
+  margin-top: 30px;
   width: 100%;
   height: 100vh; /* Full viewport height */
   display: flex;

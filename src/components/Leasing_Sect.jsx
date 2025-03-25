@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/leasingsection.css";
-import leasingImage from "../images/LeasingImage.png"; // Update with correct path
+import leasingImage from "../images/keys_traded.png"; // Update with correct path
 
 const LeasingSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
