@@ -5,6 +5,13 @@
     align-items: center;
     background: white;
     padding: 15px 40px; 
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    background: white;
+    transition: top 0.3s ease-in-out;
   }
 
   
@@ -126,7 +133,7 @@
   
     .sidebar-contact {
       background-color: #EC221F;
-      color: white;
+      color: white !important;
       padding: 0.5rem 1rem;
       border-radius: 8px;
       text-align: center;
