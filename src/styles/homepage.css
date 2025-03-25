@@ -1,0 +1,72 @@
+/* Real Estate Section Styles */
+.real-estate-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .real-estate-section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .text-content {
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .text-content h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  .text-content p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  
+  .explore-link {
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .explore-link:hover {
+    text-decoration: underline;
+  }
+  
+  .image-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media (min-width: 768px) {
+    .real-estate-section {
+      text-align: left;
+      align-items: flex-start;
+      padding: 4rem;
+    }
+    .text-content {
+      max-width: 50%;
+    }
+    .image-container {
+      margin-top: 3rem;
+    }
+  }
+  

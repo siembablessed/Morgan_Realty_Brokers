@@ -1,0 +1,145 @@
+/* Main Section */
+.testimonial-section {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Background Image */
+  .testimonial-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images//Sunshine.png") no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.6);
+  }
+  
+  /* Testimonial Container */
+  .testimonial-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    border-radius: 20px; /* Fully rounded corners */
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Static Text (Left Side) */
+  .testimonial-static {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align */
+    text-align: center; /* Ensure text is centered */
+  }
+  
+  .testimonial-static h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    max-width: 80%;
+  }
+  
+  /* Sliding Testimonials (Right Side) */
+  .testimonial-slider {
+    flex: 2;
+    max-width: 600px;
+    overflow: hidden; /* Prevent text cutout issue */
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    text-align: center;
+    padding: 20px;
+    min-width: 100%; /* Ensure each slide fully takes up space */
+  }
+  
+  .testimonial-quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-author {
+    font-size: 16px;
+    font-weight: bold;
+    color: #777;
+  }
+  
+  /* Slider Dots (Indicators) */
+  .slick-dots {
+    display: flex !important;  /* Force visibility */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px; /* Space below the testimonials */
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #999;
+    opacity: 1;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ff4a4a;
+    font-size: 14px;
+  }
+  
+  /* Fix Slide Cutout Issue */
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ensure dots stay below the testimonial text */
+  .slick-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slick-list {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .testimonial-section {
+      height: auto;
+      padding: 40px 0;
+    }
+  
+    .testimonial-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .testimonial-static {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .testimonial-slider {
+      max-width: 100%;
+    }
+  
+    .slick-dots {
+      margin-top: 10px;
+    }
+  }
+  

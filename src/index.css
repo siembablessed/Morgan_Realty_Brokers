@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Content Container */
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 30px;
+
+}
+
+
+
+/* .navbar-links {
+  display: flex;
+  gap: 20px;
+} */
+
+.navbar-links a {
+  /* text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s; */
+}
+
+/* .navbar-links a:hover {
+  color: #EC221F;
+} */
+
+/* Get in Touch Button */
+/* .get-in-touch {
+  background: #988a8a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+} */
+
+/* .get-in-touch:hover {
+  background: #C91D1B;
+} */
+
+/* Responsive Navbar */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease-in-out;
+  padding: 20px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-close {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+  }
+}

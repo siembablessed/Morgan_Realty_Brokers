@@ -1,0 +1,59 @@
+/* Full Section Container */
+.home-section {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Top White Section */
+.text-section {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 8vw;
+  text-align: left;
+}
+
+/* Text Styling */
+.text-section h1 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px; /* Reduce gap between H1 and P */
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  line-height: 1.4; /* Tighter spacing */
+  color: #333;
+  margin-bottom: 20px; /* Adds space before the button */
+}
+
+/* Link Styling */
+.explore-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 2px solid #000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.explore-link:hover {
+  opacity: 0.7;
+}
+
+/* Bottom Parallax Section */
+.parallax-section {
+  width: 100%; /* Ensures full-width */
+  height: 50vh; /* Half screen height */
+  background-image: url('/src//images//paralex.png'); /* Replace with actual image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Enables parallax effect */
+}

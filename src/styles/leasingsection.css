@@ -1,0 +1,142 @@
+.leasing-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 80px 100px;
+    gap: 50px;
+  }
+  
+  /* Left image section */
+  .leasing-image {
+    flex: 1;
+  }
+  
+  .leasing-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Right text section */
+  .leasing-text {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .leasing-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .leasing-text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Extra text hidden on mobile/tablet */
+  .extra-text {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  
+  /* When expanded, show extra text */
+  .extra-text.show {
+    display: block;
+    opacity: 1;
+    max-height: 1000px; /* Large enough to reveal all text */
+  }
+  
+  /* Read More button */
+  .read-more {
+    /* display: none; */
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff4a4a;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .read-more:hover {
+    color: #d63031;
+  }
+  
+  /* Buttons section */
+  .leasing-buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* "List Your Property" link */
+  .list-property {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .list-property:hover {
+    opacity: 0.7;
+  }
+  
+  /* "Find a Tenant" button */
+  .find-tenant {
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff4a4a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .find-tenant:hover {
+    background-color: #d63031;
+  }
+  
+  /* 🌍 Responsive Design */
+  @media (max-width: 768px) {
+    .leasing-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px 20px;
+      gap: 30px;
+    }
+
+    .sunshine-image{
+      height: 40vh;
+    }
+  
+    .leasing-text {
+      max-width: 100%;
+    }
+  
+    /* Hide extra text initially on small screens */
+    .extra-text {
+      display: none;
+    }
+  
+    /* Show Read More button on mobile & tablet */
+    .read-more {
+      display: inline-block;
+    }
+  
+    .leasing-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  

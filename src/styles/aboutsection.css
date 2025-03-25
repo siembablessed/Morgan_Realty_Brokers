@@ -1,0 +1,72 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 50px 100px;
+    gap: 50px; /* Adds space between text and image */
+  }
+  
+  .about-text {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  
+  .about-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff4a4a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .about-button:hover {
+    background-color: #d63031;
+  }
+  
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .about-image img {
+    max-width: 90%; /* Reduce image size on desktop */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* 🌍 Responsive Styles */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      gap: 30px; /* Reduce gap on mobile */
+    }
+  
+    .about-text {
+      max-width: 100%;
+    }
+  
+    .about-image {
+      justify-content: center;
+    }
+  
+    .about-image img {
+      max-width: 100%; /* Full width on mobile */
+    }
+  }
+  

@@ -1,0 +1,34 @@
+
+.container{
+    padding: 40px;
+}
+
+.cont-merge{
+    padding-left: 44px;
+}
+
+.mngtxt{
+    padding-left: 60px;
+}
+
+.hero_image{
+    max-width: 100%;
+    margin-top: auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.Home-Sect {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+.hero-text{
+    padding: 40px;
+}
+
+.sunshine-image{
+    width: 100%;
+    height: 80vh;
+}
