@@ -23,7 +23,8 @@ const Footer = () => {
           <p>149 The Chase, Mt Pleasant</p>
           <h3 className="footer-heading">Contact Us</h3>
           <p>Call Us: <span className="footer-bold">+263 776066503 / 0783318558</span></p>
-          <p>example@gmail.com</p>
+          <p>sales@morganrealty.co.zw</p>
+          <p>infor@morganrealty.co.zw</p>
         </div>
 
         {/* Information */}

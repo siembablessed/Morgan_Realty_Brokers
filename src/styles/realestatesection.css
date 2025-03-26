@@ -64,4 +64,64 @@
       display: inline-block;
     }
   }
+
+  /* Buttons for Mission & Vision */
+.mission-vision-buttons {
+  margin-top: 20px;
+}
+
+.mission-vision-buttons button {
+  background: #ff4a4a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.mission-vision-buttons button:hover {
+  background: #d63031;
+}
+
+/* Modal Popup */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff4a4a;
+}
+
+.close-btn:hover {
+  color: #d63031;
+}
+
   

@@ -1,0 +1,79 @@
+.mission-vision-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.carded {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.carded:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.cardh3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cardp {
+    margin: 5px 0 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mission-vision-container {
+        gap: 20px;
+    }
+    .carded {
+        width: 48%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .carded {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carded {
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .icon {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}

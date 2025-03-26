@@ -8,11 +8,23 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer"
 import HomeComponent from "../components/HomeSection"
+import AboutUs from "../components/AboutUs"
+import Missions from "../components/MissionVision"
 export default function Home() {
     return (
       <div>
       <section className="my-home">
           <HomeComponent />
+      </section>
+
+      <section>
+        <AboutUs />
+      </section>
+
+      <section>
+        <div className="container">
+        <Missions />
+        </div>
       </section>
 
       <section>
