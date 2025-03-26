@@ -7,9 +7,9 @@ import HouseDinning from "../images/Dinning.jpg"
 const properties = [
   {
     id: 1,
-    title: "Modern Apartment",
+    title: "Tynwald 2 Bedrooms",
     price: "$1200/mo",
-    location: "Downtown, City Center",
+    location: "Tynwald North Area",
     size: "1200 sqft",
     bedrooms: 2,
     bathrooms: 2,
