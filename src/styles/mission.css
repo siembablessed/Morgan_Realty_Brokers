@@ -7,6 +7,7 @@
 }
 
 .carded {
+    cursor: pointer;
     display: flex;
     align-items: center;
     background: white;
@@ -18,8 +19,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover animation */
 .carded:hover {
+    background-color: rgb(255, 216, 186);
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
