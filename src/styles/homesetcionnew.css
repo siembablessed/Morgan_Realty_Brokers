@@ -58,7 +58,87 @@
   background-attachment: fixed;
 }
 
-/* Popup Modal Styling */
+/* Property Popup Styling */
+.property-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.property-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.property-popup-content {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s ease-in-out;
+}
+
+.property-popup-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.property-card {
+  width: 200px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: scale(1.05);
+}
+
+.property-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.property-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.property-card p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Property Details Popup Styling */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -84,110 +164,82 @@
   background: #fff;
   padding: 20px;
   width: 90%;
-  max-width: 900px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  animation: slideUp 0.4s ease-in-out;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s ease-in-out;
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
 }
 
-.popup-content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #333;
-  text-align: center;
-  font-weight: 600;
-  width: 100%;
-}
-
-.property-card {
+.property-gallery {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .property-gallery img {
   width: 100%;
-  max-width: 400px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.property-carousel {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+
+.property-carousel img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.property-carousel img:hover {
+  opacity: 1;
 }
 
 .property-details {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 12px;
-  padding: 10px 20px;
+  gap: 10px;
   color: #555;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
+}
+
+.property-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 .property-details p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.property-details p::before {
-  content: '✔️';
-  font-size: 1.2rem;
-  color: #4caf50;
-}
-
-.property-carousel {
-  display: flex;
-  overflow: auto;
-  gap: 10px;
-  padding-bottom: 10px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.property-carousel img {
-  width: 80px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 5px;
-  opacity: 0.7;
-  transition: opacity 0.3s, transform 0.3s ease-in-out;
-}
-
-.property-carousel img:hover {
-  opacity: 1;
-  transform: scale(1.1);
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .popup-close {
-  margin-top: 10px;
+  margin-top: 20px;
   cursor: pointer;
   color: #007bff;
   font-weight: bold;
   text-align: center;
   transition: color 0.3s ease-in-out;
-  width: 100%;
 }
 
 .popup-close:hover {
   color: #ff4b4b;
 }
 
-@keyframes slideUp {
+@keyframes slideDown {
   from {
-    transform: translateY(50px);
+    transform: translateY(-50px);
     opacity: 0;
   }
   to {

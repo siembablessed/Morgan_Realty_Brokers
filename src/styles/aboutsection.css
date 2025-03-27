@@ -1,72 +1,194 @@
+/* About Section Container */
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #1a1a1a;
-    color: white;
-    padding: 50px 100px;
-    gap: 50px; /* Adds space between text and image */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 50px 100px;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-text p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.about-button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4a4a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.about-button:hover {
+  background-color: #d63031;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-button:hover {
+  color: #d63031;
+}
+
+/* Team Grid Layout */
+.team-grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+}
+
+/* Team Card */
+.team-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Team Member Image */
+.team-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ff4a4a;
+}
+
+/* Team Member Info */
+.team-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-info p {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+}
+
+/* Responsive Grid Adjustments */
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on large screens */
   }
-  
+}
+
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
+  }
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
   .about-text {
-    flex: 1;
-    max-width: 50%;
+    max-width: 100%;
   }
-  
-  .about-text p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.6;
-  }
-  
-  .about-button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    background-color: #ff4a4a;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .about-button:hover {
-    background-color: #d63031;
-  }
-  
+
   .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
-  
+
   .about-image img {
-    max-width: 90%; /* Reduce image size on desktop */
-    height: auto;
-    border-radius: 8px;
+    max-width: 100%;
   }
-  
-  /* 🌍 Responsive Styles */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-      padding: 40px 20px;
-      gap: 30px; /* Reduce gap on mobile */
-    }
-  
-    .about-text {
-      max-width: 100%;
-    }
-  
-    .about-image {
-      justify-content: center;
-    }
-  
-    .about-image img {
-      max-width: 100%; /* Full width on mobile */
-    }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
   }
-  
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

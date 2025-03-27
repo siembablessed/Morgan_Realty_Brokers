@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/realestatesection.css";
-import realEstateImage from "../images/property_leased.png"; // Update the image path
+import realEstateImage from "../images/Missions.png"; 
 
 const AboutUs = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -8,25 +8,15 @@ const AboutUs = () => {
   return (
     <div className="real-estate-container">
       <div className="real-estate-text">
-        <h2>Your Trusted Partner in Real Estate & <br /> Property Management</h2>
+        <h2>About Us</h2>
         <p>
-        Whether buying, selling, or leasing, property owners and investors trust us 
-        for expert guidance in Zimbabwe’s dynamic real estate market. With deep industry 
-        knowledge, a strong local network, and a commitment to excellence, we help our clients 
-        make informed decisions that maximize their investments
+        Morgan Realty Brokers Property Consultant is a trusted real estate and property management firm dedicated to providing seamless property solutions. We specialize in managing residential and commercial properties, connecting landlords with reliable tenants, and offering expert real estate advisory services.
         </p>
 
         {/* Extra text that is hidden on mobile & tablet */}
         <div className={`extra-text ${isExpanded ? "show" : ""}`}>
           <p>
-          We offer a full-service approach to property management, leasing, and sales—ensuring 
-          smooth transactions, reliable tenant placements, and high returns. From marketing your 
-          property to handling legal compliance and maintenance, we take care of the details so you can 
-          focus on what matters most.
-          </p>
-          <p>
-          With Morgan Realty Brokers, you gain a dedicated team of professionals who understand the market, 
-          anticipate challenges, and deliver customized solutions for your real estate needs.
+          With a deep understanding of Zimbabwe’s real estate market, we help property owners maximize their investments while ensuring tenants find secure and comfortable spaces to call home. Our hands-on approach, professionalism, and commitment to excellence set us apart in the industry.
           </p>
         </div>
 
