@@ -6,6 +6,12 @@ import teamData from "../data/teamData"; // Import team data
 const AboutSection = () => {
   const [showModal, setShowModal] = useState(false);
 
+  const closeModal = (event) => {
+    if (event.target.classList.contains("modal-overlay")) {
+      setShowModal(false);
+    }
+  };
+
   return (
     <div className="about-container">
       <div className="about-text">
@@ -22,11 +28,11 @@ const AboutSection = () => {
       </div>
 
       {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <span className="close-button" onClick={() => setShowModal(false)}>&times;</span>
             <h2>Our Team</h2>
-            <div className="team-grid">
+            <div className="team-grid" style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
               {teamData.map((member, index) => (
                 <div key={index} className="team-card">
                   <img src={member.image} alt={member.name} className="team-image" />
