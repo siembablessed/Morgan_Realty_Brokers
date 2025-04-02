@@ -19,7 +19,7 @@ const MissionVision = () => {
         <div className="carded">
           <img src={Icon2} alt="Vision Icon" className="icon" />
           <div>
-            <h3>Our Vision</h3>
+            <h3 className='cardh3'>Our Vision</h3>
             <p className='cardp'>
               To set new standards in property management excellence, recognized for 
               environmental responsibility and tenant satisfaction, while expanding our 
